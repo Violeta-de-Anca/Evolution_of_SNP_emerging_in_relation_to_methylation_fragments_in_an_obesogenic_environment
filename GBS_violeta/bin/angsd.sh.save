@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#SBATCH -A naiss2023-22-162
+#SBATCH -p core -n 4
+#SBATCH --mem=80gb
+#SBATCH -t 100:00:00
+#SBATCH -J recalibration
+#SBATCH --error /proj/naiss2023-23-55/GBS_violeta/log_files/angsd.gatk.err
+#SBATCH --output /proj/naiss2023-23-55/GBS_violeta/log_files/angsd.gatk.out
+#SBATCH --mail-type=FAIL,COMPLETED
+#SBATCH --mail-user=violeta.deancaprado@ebc.uu.se
+
+module load bioinfo-tools samtools PCAngsd ANGSD bcftools plink htslib
+
+working_dir=/proj/naiss2023-23-55/GBS_violeta
+input_prefix=$working_dir/aligned
+db_knownsites=$working_dir/snp_indel_databases
+recalibration_output=$working_dir/recalibration
+reference_genome=/proj/naiss2023-23-55/GBS_violeta/reference_genomes/mus_musculus/uscs_ref/mm39.fa.gz
+mkdir -p $recalibration_output
+
+
+
+angsd -b $input_prefix/bamlist.txt -GL 2 -doMajorMinor 1 -doMaf 2 -minMapQ 30 -minQ 20 -nThreads 4

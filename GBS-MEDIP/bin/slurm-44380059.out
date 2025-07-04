@@ -1,0 +1,1 @@
+/var/spool/slurmd/job44380059/slurm_script: line 24: ${basename $i .sorted.bam}: bad substitution
