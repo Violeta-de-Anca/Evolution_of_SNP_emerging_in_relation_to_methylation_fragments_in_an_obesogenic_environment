@@ -28,6 +28,9 @@ cleaned_1=${cleaned%_Mouse.unique.sorted.bam.HDF5}
 
 gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix overnutrition_${cleaned_1} --model $output_folder/control_cohort-model --input $sample
 
+#############################################################
+#THE CODE BELOW DOES NOT WORK!!!!!!!!!!!!!!!
+#############################################################
 #this does not work with all the individuals at the same time
 #gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix overnutrition_ploidy --model $output_folder/control_cohort-model \
 #	--input $output_folder/C13F2_13_Mouse.unique.sorted.bam.HDF5 \
@@ -42,15 +45,15 @@ gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix overn
 #        --input $output_folder/C13F2_23_Mouse.unique.sorted.bam.HDF5 \
 #        --input $output_folder/C13F2_24_Mouse.unique.sorted.bam.HDF5 \
 #	--input $output_folder/C13F3_14_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_15_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_16_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_17_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_18_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_19_Mouse.unique.sorted.bam.HDF5 \
-	--input $output_folder/C13F3_20_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_21_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_22_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_24_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_25_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_27_Mouse.unique.sorted.bam.HDF5
+#        --input $output_folder/C13F3_15_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_16_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_17_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_18_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_19_Mouse.unique.sorted.bam.HDF5 \
+#	--input $output_folder/C13F3_20_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_21_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_22_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_24_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_25_Mouse.unique.sorted.bam.HDF5 \
+#        --input $output_folder/C13F3_27_Mouse.unique.sorted.bam.HDF5
 

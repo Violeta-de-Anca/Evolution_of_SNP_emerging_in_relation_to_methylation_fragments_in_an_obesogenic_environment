@@ -26,37 +26,5 @@ echo $name_sample
 cleaned=${name_sample#C13}
 cleaned_1=${cleaned%_Mouse.unique.sorted.bam.HDF5}
 
-#gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix overnutrition_${cleaned_1} --model $output_folder/control_cohort-model --input $sample
-
-#this does not work with all the individuals at the same time
-gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix control_random_ploidy --model $output_folder/random_cohort-model \
-	--input $output_folder/C13F1_11_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_1_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_2_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_3_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_4_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_5_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_6_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_7_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_8_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F1_9_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_2_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_3_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_4_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_5_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_6_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_7_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_8_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F2_9_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_10_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_11_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_12_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_13_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_1_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_2_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_3_Mouse.unique.sorted.bam.HDF5 \
-        --input $output_folder/C13F3_4_Mouse.unique.sorted.bam.HDF5 \
-	--input $output_folder/C13F3_5_Mouse.unique.sorted.bam.HDF5 \
-	--input $output_folder/C13F3_7_Mouse.unique.sorted.bam.HDF5 \
-	--input $output_folder/C13F3_8_Mouse.unique.sorted.bam.HDF5 \
-	--input $output_folder/C13F3_9_Mouse.unique.sorted.bam.HDF5
+gatk DetermineGermlineContigPloidy --output $output_folder --output-prefix control_random_ploidy_${cleaned_1} --model $output_folder/random_cohort-model \
+	--input $output_folder/$sample
