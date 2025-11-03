@@ -12,6 +12,6 @@ module load bioinfo-tools vep/113.0
 
 #variant effect predictor, for the final putative CNVs!
 
-vep -v -i /proj/naiss2024-23-57/ICR_male_lineage/GBS_violeta/cnv_detection/GATK/F2_cnvs_final.txt -o F2_predictions_VEP.txt --cache --dir $VEP_CACHE --force_overwrite  --assembly GRCm39 --offline --species mus_musculus --format ensembl --stats_text --stats_file F2_stats_file.txt --stats_html
+#vep -v -i /proj/naiss2024-23-57/ICR_male_lineage/GBS_violeta/cnv_detection/GATK/F2_cnvs_final.txt -o F2_predictions_VEP.txt --cache --dir $VEP_CACHE --force_overwrite  --assembly GRCm39 --offline --species mus_musculus --format ensembl --stats_text --stats_file F2_stats_file.txt --stats_html
 
-vep -v -i /proj/naiss2024-23-57/ICR_male_lineage/GBS_violeta/cnv_detection/GATK/F3_cnvs_final.txt -o F3_predictions_VEP.txt --cache --dir $VEP_CACHE --force_overwrite  --assembly GRCm39 --offline --species mus_musculus --format ensembl --stats_text --stats_file F3_stats_file.txt --stats_html
+vep -v -i /proj/naiss2024-23-57/ICR_male_lineage/GBS_violeta/cnv_detection/GATK/F3_cnvs_final.ensembl -o F3_predictions_VEP.txt --cache --dir $VEP_CACHE --force_overwrite  --assembly GRCm39 --offline --species mus_musculus --format ensembl --stats_text --stats_file F3_stats_file.txt --stats_html
