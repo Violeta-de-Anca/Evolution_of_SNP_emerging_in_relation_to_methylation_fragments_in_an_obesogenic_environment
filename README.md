@@ -5,7 +5,7 @@ This repository contains the scripts used in the analyses presented in the manus
 **“Germline genomic and methylomic dynamics following three generations of early-life metabolic challenges”**  
 V. de Anca Prado, F. Pértille, D. Andersson, M. Mourin-Fernandez, M. Gòdia, J.C. Jiménez-Chillarón, J. Rüegg, C. Guerrero-Bosagna (corresponding author)
 
-The project investigates how a **multigenerational early-life metabolic challenge** impacts the **sperm genome** and **sperm DNA methylation** across generations, and whether **genetic (SNP/CNV)** and **epigenetic** variation show coordinated dynamics.
+The project investigates how a **multigenerational early-life metabolic challenge** impacts the **sperm genome** and **methylome** across generations, and whether there is any dynamic between **genetic novelties (SNP/CNV)** and **methylomic signals**.
 
 ---
 
@@ -25,19 +25,22 @@ The project investigates how a **multigenerational early-life metabolic challeng
 
 This study uses **GBS-MeDIP**, which produces:
 - **GBS** libraries (genotyping-by-sequencing, for reduced representation of the genome)
-- **GBS-MeDIP** libraries (methylation-enriched fragments in the same reduced representation)
+- **GBS-MeDIP** libraries (methylation-enriched fragments in the same reduced representation library)
 
 With these methods we obtained:
 - On average with the GBS libraries, we mapped ~ 0.3 % of the mouse genome per individual
 - On average with the GBS-MeDIP libraries, we mapped ~ 0.03 % of the mouse genome per individual
 
+The BAM files related to both GBS and GBS-MeDIP libraries are in ENA, in the project with number: PRJEB105468
+
+
 ---
 
-## Main findings (high-level)
+## Main findings
 
-- **Genome:** SNP-based clustering suggested a detectable treatment-related genomic signal (unrelated OG families clustered together in SNP space in some analyses).
-- **Genome instability:** CNV events were detected in OG, with enrichment in **LINEs** and **LTRs** in several events, consistent with repeat-associated instability.
-- **Methylome (global):** PCA of methylation windows did not show a strong global treatment separation, but downstream analyses identified:
+- **Genome:** SNP-based clustering suggested a detectable treatment-related signal (unrelated OG families clustered together in the SNP space).
+- **Genome instability:** CNV events were detected in OG, with enrichment in **LINEs** and **LTRs** in several events, consistent or expanding events across generations.
+- **Methylome:** PCA of methylation windows did not show a strong global treatment separation, but downstream analyses identified:
   - pathway-level differences (including metabolic/developmental pathways),
   - regional differences involving transposable/repetitive elements,
   - reduced methylation in **LINE** elements in OG across generations in parts of the dataset.
@@ -49,19 +52,18 @@ With these methods we obtained:
 
 ## Repository layout
 
-At the top level you will find (folder names may evolve):
+At the top level you will find:
 
 - `GBS_violeta/`  
-  Scripts for **GBS genetic analyses**, including SNP calling/filters and downstream population-genetic analyses (PCA, hierarchical clustering/IBS, SFS, etc.).
+  Scripts for **GBS genetic analyses**, including SNP calling/filters and downstream population-genetic analyses (PCA, hierarchical clustering/IBS, SFS, etc).
 
-- `GBS-MEDIP/` (and subfolders such as `bin/`)  
+- `GBS-MEDIP/`  
   Scripts for **GBS-MeDIP methylation analyses**, including window definition, counting, normalization, differential methylation, annotation, and pathway analyses.
 
-If you add new folders, consider documenting them here.
 
 ---
 
-## Analysis workflow (conceptual)
+## Analysis workflow
 
 ```mermaid
 flowchart TD
