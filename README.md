@@ -67,19 +67,19 @@ At the top level you will find:
 
 ```mermaid
 flowchart TD
-  A[Raw FASTQ] --> B[Demultiplex and trimming QC]
+  A[Raw FASTQ] --> B[Demultiplex and trimming with QC]
   B --> C1[GBS alignment]
-  B --> C2[GBS MeDIP alignment]
+  B --> C2[GBS-MeDIP alignment]
 
   C1 --> D1[SNP calling and filtering]
-  D1 --> E1[PCA IBS tree SFS]
+  D1 --> E1[PCA based on SNP, formation of IBS tree, SFS test]
 
-  C1 --> F1[CNV calling gCNV]
-  F1 --> G1[Repeat enrichment and variant annotation VEP]
+  C1 --> F1[CNV calling]
+  F1 --> G1[Repeat enrichment and variant annotation (VEP)]
 
-  C2 --> D2[Peak or window definition MACS]
-  D2 --> E2[Counts featureCounts and normalization]
+  C2 --> D2[Window definition (MACS3)]
+  D2 --> E2[Count matrix creation (featureCounts) and normalization]
   E2 --> F2[PCA methylome and density profiles]
-  E2 --> G2[DMR tests intra and inter generational]
-  E2 --> H2[Annotation genes and repeats and pathway enrichment]
-  E2 --> I[Genome epigenome dynamics methylation vs novel SNP and CNV]
+  E2 --> G2[DMA with intragenerational and intergenerational comparisions]
+  E2 --> H2[Annotation of genes, repeat elements enrichment and pathway enrichment]
+  E2 --> I[Genome-epigenome dynamics: level of methylation in father vs novel SNP and CNV emergence in offspring]
