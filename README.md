@@ -83,3 +83,4 @@ flowchart TD
   E2 --> G2[DMA with intragenerational and intergenerational comparisions]
   E2 --> H2[Annotation of genes, repeat elements enrichment and pathway enrichment]
   E2 --> I[Genome-epigenome dynamics: level of methylation in father vs novel SNP and CNV emergence in offspring]
+```
