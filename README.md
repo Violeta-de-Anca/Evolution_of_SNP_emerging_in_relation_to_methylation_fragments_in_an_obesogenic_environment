@@ -46,8 +46,6 @@ The BAM files related to both GBS and GBS-MeDIP libraries are in ENA, in the pro
   - reduced methylation in **LINE** elements in OG across generations in parts of the dataset.
 - **Genome–epigenome dynamics:** OG showed reduced emergence of novel SNPs in offspring compared with CG in the analyzed fragments, and the methylation–novel SNP relationship differed between groups.
 
-> Note: This repository focuses on reproducing the computational analyses; interpretation belongs to the manuscript.
-
 ---
 
 ## Repository layout
