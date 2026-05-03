@@ -75,10 +75,10 @@ flowchart TD
   D1 --> E1[PCA based on SNP, formation of IBS tree, SFS test]
 
   C1 --> F1[CNV calling]
-  F1 --> G1[Repeat enrichment and variant annotation (VEP)]
+  F1 --> G1["Repeat enrichment and variant annotation (VEP)"]
 
-  C2 --> D2[Window definition (MACS3)]
-  D2 --> E2[Count matrix creation (featureCounts) and normalization]
+  C2 --> D2["Window definition (MACS3)"]
+  D2 --> E2["Count matrix creation (featureCounts) and normalization"]
   E2 --> F2[PCA methylome and density profiles]
   E2 --> G2[DMA with intragenerational and intergenerational comparisions]
   E2 --> H2[Annotation of genes, repeat elements enrichment and pathway enrichment]
